@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 60px;
+    margin: 200px;
+    text-align: center;
+}
+
+
+.fadeIn {
+    opacity: 0.0;
+    text-align: center;
+    color: white;
+    margin: 200px auto;
+    display: block;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    transition-duration: 3s;
+}
+
+.transformed-state {
+    opacity: 1.0;
+}
