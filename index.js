@@ -1,9 +1,23 @@
-function changeOpa () {
-    let element = document.getElementsByClassName("fadeIn")
-    for (elements of element) {
-        elements.classList.toggle("transformed-state");
-    }
-    center.classList.toggle("transformed-state");
+let element = document.getElementsByClassName("fadeIn")
+
+function changeOpaIn() {
+    //let element = document.getElementsByClassName("fadeIn")
+    element[0].classList.toggle("transformed-state-in");
 }
 
-window.onload = changeOpa()
+function changeOpaOut() {
+    element[0].classList.toggle("transformed-state-out");
+}
+
+element[0].addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        changeOpaOut();
+        setTimeout(posFixed, 3000);
+    };
+});
+
+function posFixed() {
+    element[0].classList.toggle("transform-gone");
+}
+
+window.onload = changeOpaIn()
