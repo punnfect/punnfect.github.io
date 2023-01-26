@@ -12,12 +12,10 @@ function changeOpaOut() {
 element[0].addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         changeOpaOut();
-        setTimeout(posFixed, 3000);
     };
 });
 
-function posFixed() {
-    element[0].classList.toggle("transform-gone");
-}
 
 window.onload = changeOpaIn()
+
+// timeout function --- setTimeout(function i want to run, time in miliseconds ex 3000);
