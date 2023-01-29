@@ -7,7 +7,7 @@
 
 body {
     background-color: black;
-    contain: content;
+
 }
 
 #ask-name {
@@ -21,13 +21,18 @@ body {
     font-size: 60px;
 }
 
+#change {
+
+}
+
 .project-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     /*border-style: solid;
     border-color: red;*/
-    opacity: 1.0;
+    opacity: 0;
+
 }
 
 .project-container > div {
@@ -36,9 +41,13 @@ body {
     flex-direction: column;
 
 }
+a:hover {
+    color: red !important;
+}
 
 .project-container > div > div > p, a {
-    background-color: orange;
+    background-color: transparent;
+    color: white !important;
     margin: auto;
     max-width: fit-content;
 
@@ -53,7 +62,7 @@ body {
     padding: 125px;
     margin: 125px;
     margin-bottom: 50px;
-    background-color: red;
+    background-color: #6c0ba9;
     /*border-style: dotted;
     border-color: blue;*/
     opacity: 1.0;
@@ -83,11 +92,15 @@ body {
 
 .transformed-state-in {
     opacity: 1.0;
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
 }
 
 .transformed-state-out {
     opacity: 0.0;
 }
+
 
 
 @media only screen and (max-width: 1030px) {
@@ -96,6 +109,9 @@ body {
         flex-wrap: wrap;
     }
 
+    body {
+        contain: content;
+    }
 
 }
 
