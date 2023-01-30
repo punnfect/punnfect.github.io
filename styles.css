@@ -32,7 +32,9 @@ body {
     /*border-style: solid;
     border-color: red;*/
     opacity: 0;
-
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
 }
 
 .project-container > div {
@@ -41,6 +43,7 @@ body {
     flex-direction: column;
 
 }
+
 a:hover {
     color: red !important;
 }
@@ -79,6 +82,7 @@ a:hover {
 .fadeIn {
     opacity: 0.0;
     position: absolute;
+    z-index: 10;
     left: 0;
     right: 0;
     top: 20vh;
@@ -92,9 +96,7 @@ a:hover {
 
 .transformed-state-in {
     opacity: 1.0;
-    transition-property: opacity;
-    transition-duration: 3s;
-    transition-timing-function: ease-in-out;
+
 }
 
 .transformed-state-out {
